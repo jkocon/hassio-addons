@@ -1,0 +1,30 @@
+{
+  "name": "MinIO Backup",
+  "version": "1.0.0",
+  "slug": "minio_backup",
+  "startup": "application",
+  "description": "Automatic Home Assistant backups to a MinIO S3 server with retention and optional AES-256 encryption.",
+  "arch": ["aarch64", "amd64"],
+  "schema": {
+    "minio_endpoint": "str",
+    "minio_access_key": "str",
+    "minio_secret_key": "str",
+    "minio_bucket": "str",
+    "daily_to_keep": "int",
+    "monthly_to_keep": "int",
+    "daily_time": "str",
+    "encryption_enabled": "bool",
+    "encryption_password": "str"
+  },
+  "options": {
+    "minio_endpoint": "https://your-minio-server.com",
+    "minio_access_key": "",
+    "minio_secret_key": "",
+    "minio_bucket": "ha-backup",
+    "daily_to_keep": 3,
+    "monthly_to_keep": 12,
+    "daily_time": "03:00",
+    "encryption_enabled": true,
+    "encryption_password": ""
+  }
+}
