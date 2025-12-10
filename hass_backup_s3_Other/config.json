@@ -1,0 +1,40 @@
+{
+  "name": "Hass backup S3_Other",
+  "version": "0.0.3",
+  "slug": "hass_backup_s3_Other",
+  "description": "Backup your snapshots to S3 compatible object storage with local encryption and lifecycle policies",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "manual",
+  "icon": "ico.png",
+  "logo": "ico.png",
+  "map": ["backup:rw", "media:rw", "ssl:rw"],
+  "init": false,
+  "apparmor": true,
+  "options": {
+    "sourceDir": "/backup",
+  	"bucketName": "myBucketName",
+    "endpointUrl": "https://s3.fr-par.scw.cloud",
+    "region": "fr-par",
+  	"accessKey": null,
+	  "secretKey": null,
+	  "GPGFingerprint": "",
+    "GPGPassphrase":"",
+    "incrementalFor": "7D",
+    "removeOlderThan":"14D",
+    "restore": false
+  },
+  "schema": {
+    "sourceDir": "str",
+    "bucketName": "str",
+    "endpointUrl": "str",
+    "region": "str",
+    "accessKey": "str?",
+    "secretKey": "str?",
+    "GPGFingerprint": "str?",
+    "GPGPassphrase": "str?",
+    "incrementalFor": "str?",
+    "removeOlderThan": "str?",
+    "restore": "bool"
+  }
+}
