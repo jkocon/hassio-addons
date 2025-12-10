@@ -15,5 +15,6 @@
   },
   "schema": {
     "access_key": "str",
-    "secret    "secret_key": "str"
+    "secret secret_key": "str"
   }
+}

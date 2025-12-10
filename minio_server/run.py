@@ -1,4 +1,3 @@
-
 #!/usr/bin/with-contenv bashio
 ACCESS_KEY=$(bashio::config 'access_key')
 SECRET_KEY=$(bashio::config 'secret_key')
