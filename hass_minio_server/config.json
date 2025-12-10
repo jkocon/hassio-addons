@@ -1,0 +1,19 @@
+
+{
+  "name": "MinIO Server",
+  "version": "1.0",
+  "slug": "minio_server",
+  "description": "Host MinIO on Home Assistant",
+  "startup": "services",
+  "ports": {
+    "9000/tcp": 9000
+  },
+  "map": ["config:rw", "ssl"],
+  "options": {
+    "access_key": "minioadmin",
+    "secret_key": "minioadmin"
+  },
+  "schema": {
+    "access_key": "str",
+    "secret    "secret_key": "str"
+  }
